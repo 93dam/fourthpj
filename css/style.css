@@ -1,0 +1,248 @@
+@charset "utf-8";
+@keyframes shadow-drop-2-center {
+  0% {
+    transform: translateZ(0);
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+  }
+}
+* {
+  margin:0;
+  padding: 0;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: #ff915e;
+}
+body {
+  font-family: "Cafe24SsurroundAir";
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+#wrap {
+  width: 1200px;
+  height: auto;
+  margin:0 auto;
+}
+/* navbar */
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  width:1200px;
+  height:auto;
+  background-color: #fff;
+  z-index: 9999;
+}
+.mainNav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width:400px;
+  padding: 10px 0;
+}
+.mainNav > li {
+  font-size: 3em;
+}
+.subNav{
+  position: absolute;
+  display: none;
+  top:70px;
+  width:100%;
+  background-color: #ff915e;
+
+}
+.subNav li {
+  padding: 10px 0;
+}
+.subNav li a {
+  display: inline-block;
+  width:100%;
+  color:#333;
+  transition: all 0.4s;
+}
+.subNav li a:hover {
+  color:#000;
+  transform: scale(1.1);
+}
+/* navbar */
+/* mian page start */
+#menu-top {
+  position: fixed;
+  right:100px;
+  bottom:100px;
+  width:50px;
+  height:50px;
+  line-height: 55px;
+  color:#000;
+  border:3px solid #ff915e;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+section > article {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+#mainLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#mainVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+#jeju1,#jeju2,#jeju3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#jeju1 h1,#jeju2 h1,#jeju3 h1 {
+  font-size: 3em;
+  padding: 40px 0;
+}
+#jeju1 p ,#jeju2 p, #jeju3 p {
+  padding: 40px 0;
+  width: 600px;
+}
+#jeju1 img,#jeju3 img {
+  transition: all 0.4s;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+#jeju1 img:hover,#jeju3 img:hover {
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+#jeju2 img {
+  transition: all 0.4s;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+#jeju2 img:hover {
+  clip-path: polygon(1% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+/* 제주도(제주시,서귀포시) 페이지 */
+#travel,
+#active,
+#event {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#travel figure,
+#active figure,
+#event figure {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#travel h1,
+#active h1,
+#event h1 {
+  padding: 40px 0;
+  font-size: 3em;
+}
+#active figure > img,
+#travel figure > img,
+#event figure > img {
+  border: 1px dashed #000;
+}
+#active figure > img:hover,
+#travel figure > img:hover,
+#event figure > img:hover {
+  animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+/* 테마,여행,이벤트 페이지 */
+#tasteplace {
+  width: 100%;
+  height: auto;
+  outline: 1px solid blue
+  display: flex;
+}
+#tasteplace span {
+  padding-bottom: 20px;
+}
+#tasteplace h1 {
+  font-size: 2em;
+  padding: 50px 0;
+}
+.tp {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#cafe {
+  width:100%;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#cafe span {
+  padding-bottom: 20px;
+}
+#cafe figure {
+  width:100%;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cafe figure > img {
+  border: 5px solid #27db8a;
+  box-shadow:12px 12px 2px 1px #ff9540;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+.c1 img,.c3 img {
+  transform:skew(5deg);
+}
+.c1 img:hover,.c3 img:hover{
+  transform: skew(-5deg);
+}
+.c2 img,.c4 img {
+  transform: skew(-5deg);
+}
+.c2 img:hover,.c4 img:hover {
+  transform: skew(5deg);
+}
+#cafe h1 {
+  font-size: 2em;
+  padding: 50px 0;
+}
+footer {
+  position: fixed;
+  left:0;
+  bottom:0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #fff;
+
+}
